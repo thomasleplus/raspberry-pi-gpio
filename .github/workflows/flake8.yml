@@ -17,5 +17,5 @@ jobs:
       uses: actions/checkout@v2
     - name: Install Flake8
       run: sudo python -m pip install flake8
-    - name: Run PerlCritic
+    - name: Run Flake8
       run: flake8 *.py
