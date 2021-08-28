@@ -1,4 +1,4 @@
-# raspberry-pi-gpio
+# Raspberry Pi GPIO
 
 A simple example of how to control a Raspberry Pi's GPIO pin using python.
 
