@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
-import RPi.GPIO as GPIO
 import time
 
-PIN = 26    # BCM GPIO pin 26
+from RPi import GPIO
+
+PIN = 26  # BCM GPIO pin 26
 DELAY = 60  # 1 minute
 
 GPIO.setmode(GPIO.BCM)
