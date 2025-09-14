@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+"""Blink a Raspberry Pi LED."""
 
 import time
 
