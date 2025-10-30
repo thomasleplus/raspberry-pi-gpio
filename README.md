@@ -21,17 +21,20 @@ The `up_for_a_minute.py` script provides a straightforward example of GPIO contr
 ## Installation
 
 1. Clone this repository:
+
    ```bash
    git clone https://github.com/yourusername/raspberry-pi-gpio.git
    cd raspberry-pi-gpio
    ```
 
 2. Install the RPi.GPIO library (if not already installed):
+
    ```bash
    pip install RPi.GPIO
    ```
 
    Or on most Raspberry Pi systems:
+
    ```bash
    sudo apt-get update
    sudo apt-get install python3-rpi.gpio
@@ -45,7 +48,7 @@ The `up_for_a_minute.py` script provides a straightforward example of GPIO contr
 2. Connect a **220Ω-330Ω resistor** in series with the LED
 3. Connect the **cathode** (shorter leg) of the LED to any **GND** pin
 
-```
+```text
 Raspberry Pi          LED
 GPIO 26 (Pin 37) -->  Anode (+) --|>|-- Resistor -- GND
 ```
@@ -67,6 +70,7 @@ sudo python up_for_a_minute.py
 ```
 
 The script will:
+
 1. Turn GPIO pin 26 HIGH (3.3V)
 2. Wait for 60 seconds
 3. Turn GPIO pin 26 LOW (0V)
@@ -80,6 +84,7 @@ You can modify the constants at the top of `up_for_a_minute.py` to customize the
 - `DELAY`: Change the duration in seconds
 
 Example:
+
 ```python
 PIN = 17  # Use GPIO 17 instead
 DELAY = 30  # Run for 30 seconds instead of 60
@@ -90,6 +95,7 @@ DELAY = 30  # Run for 30 seconds instead of 60
 This script uses **BCM (Broadcom)** pin numbering, which refers to the GPIO numbers on the Broadcom chip. This is different from the physical pin numbers on the board.
 
 Common BCM GPIO pins:
+
 - GPIO 26 = Physical Pin 37
 - GPIO 17 = Physical Pin 11
 - GPIO 27 = Physical Pin 13
@@ -99,13 +105,17 @@ For a complete pinout diagram, visit [pinout.xyz](https://pinout.xyz/)
 ## Troubleshooting
 
 ### Permission Denied
+
 If you get a permission error, run the script with sudo:
+
 ```bash
 sudo python up_for_a_minute.py
 ```
 
 ### GPIO Already in Use
+
 If you see warnings about GPIO channels already in use, the cleanup wasn't properly executed. You can force cleanup by running:
+
 ```python
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
@@ -113,6 +123,7 @@ GPIO.cleanup()
 ```
 
 ### LED Not Lighting
+
 - Check the LED polarity (longer leg is positive/anode)
 - Verify the resistor is connected
 - Ensure you're using the correct pin number
