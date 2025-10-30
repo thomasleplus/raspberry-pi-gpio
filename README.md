@@ -136,14 +136,6 @@ GPIO.cleanup()
 - Maximum current per GPIO pin: ~16mA
 - Never connect GPIO pins directly to 5V or ground without appropriate circuitry
 
-## License
-
-This project is open source and available under the MIT License.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
@@ -155,3 +147,7 @@ Please read [SECURITY.md](SECURITY.md) for details on our security policy and ho
 ## Code of Conduct
 
 Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on our code of conduct.
+
+## License
+
+This project is licensed under the terms of the [LICENSE](LICENSE) file.
