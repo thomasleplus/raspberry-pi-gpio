@@ -112,6 +112,7 @@ venv.bak/
 
 .config/
 *.bak
+*-e
 *~
 \#*\#
 .\#*
